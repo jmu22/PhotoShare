@@ -1,0 +1,80 @@
+
+<!doctype html>
+
+<head>
+    <link rel="stylesheet" href= "{{ url_for('static',filename='style.css') }}">
+    <style>
+    body { background-image:url({{url_for('static', filename='yellow.jpg')}});
+          background-position: center; }
+    h4 {color: #225998;}
+    p{color:#225998;}
+    h1{
+        font-family:"Brush Script MT";
+        text-align: center;
+        font-size: 5em;
+    color: #225998; }
+
+     h3{text-align:center; color:#225998;}
+    </style>
+</head>
+<h1> Photoshare </h1>
+<h3> Created by Jeffrey Mu and Dojun Park</h3>
+<body>
+
+<title>Photoshare</title>
+
+
+<div class="topnav" id="myTopnav">
+
+    <a href='/'>Home</a>
+    <a href='/profile'>Profile</a>
+  <a href='/viewfriends'>Friend List</a>
+  <a href='/checkalbums'>Look Through Albums</a>
+  <a href='/allmyphotos'> Look Through All My Photos</a>
+  <a href='/allphotos'>Look Through Photos</a>
+  <a href='/logout'>Logout</a>
+    <a href= '/createalbum'>Create album</a>
+    <a href='/addfriends'>Add Friend</a>
+    <a href='/searchbytag'>Search by Tag</a>
+    <a href='/upload'>Upload a photo</a>
+    <a href='/findpeople'>Find People</a>
+</div>
+{% if message %}
+  <h4>{{message}}!</h4>
+{% endif %}
+{% if name %}
+  <h1>Hello {{ name }}!</h1>
+{% endif %}
+
+{% if photos %}
+<h2>Here's your photos</h2>
+    <ul>
+    {% for photo in photos %}
+
+        <li>{{photo[2]}}<br>
+        <li>photo_id: {{ photo[1]}}</li>
+        <img src='data:image/png;base64, {{photo[0]}}'/></li>
+        <form method="post" action="{{ url_for('register_user') }}">
+            <label for="comment">Enter COMMENT</label>
+            <input type="text" name="comment" />
+            <label for="pid">Enter Photo Id</label>
+            <input type="text" name="pid" /><br />
+            <input type="submit" />
+
+    {% endfor %}
+    </ul>
+{% endif %}
+<p><a href='/likepicture'>Like a picture</a></p>
+
+{% if message is none %}
+  <p>You should <a href='/login'>login!</a></p>
+{% else %}
+  <p> Go to <a href='/profile'>profile?</a></p>
+{% endif %}
+
+</body>
+
+
+
+
+

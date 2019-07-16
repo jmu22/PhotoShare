@@ -1,0 +1,18 @@
+<!doctype html>s
+<h2>Photos tagged with {{ tag }}:</h2>
+
+{% if tagged %}
+<h2> Tagged Photos </h2>
+  <ul>
+  {% for pic in tagged %}
+
+      <li>{{pic[2]}}<br>
+      <img src='data:image/png;base64, {{pic[0]}}'/></li>
+  {% endfor %}
+  </ul>
+{% endif %}
+
+
+<p> Go to <a href='/profile'>profile?</a></p>
+<p><a href='/'>Home</a></p>
+

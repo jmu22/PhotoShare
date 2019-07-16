@@ -1,0 +1,16 @@
+<!doctype html>
+<head> <link rel="stylesheet" type="text/css" href="style.css"></head>
+<h2> Your photo has been added to {{ album }}! </h2>
+
+{% if Pic %}
+  <ul>
+  {% for photo in Pic %}
+
+      <li>{{photo[2]}}<br>
+      <img src='data:image/png;base64, {{photo[0]}}'/></li>
+  {% endfor %}
+  </ul>
+{% endif %}
+
+<p> Go to <a href='/profile'>profile?</a></p>
+<p><a href='/'>Home</a></p>

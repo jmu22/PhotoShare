@@ -1,0 +1,21 @@
+<!doctype html>
+<head> <link rel="stylesheet" type="text/css" href="style.css">
+<title>Add a picture to an existing album!</title>
+</head>
+<body>
+
+
+  <div>
+  <div id = "content">
+    <form method="post" action="{{ url_for('addtoalb') }}">
+      <label for="picname">Enter the picture id number (reference in all photos):</label>
+      <input type="picname" name="picname" />
+      <label for="aname">Enter the album name:</label>
+      <input type="aname" name="aname" />
+      <input type="submit" />
+      <p>Click <a href='/profile'>here</a> to go back.</p>
+    </form>
+  </div>
+
+
+</body>

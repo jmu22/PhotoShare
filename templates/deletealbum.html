@@ -1,0 +1,20 @@
+<!doctype html>
+
+
+<title>Want to delete an album?</title>
+
+<body>
+
+
+  <div>
+  <div id = "content">
+    <form method="post" action="{{ url_for('deletealbum') }}">
+      <label for="Delalb">Enter the album name:</label>
+      <input type="Delalb" name="Delalb" />
+      <input type="submit" />
+      <p>Click <a href='/profile'>here</a> to go back.</p>
+    </form>
+  </div>
+
+
+</body>

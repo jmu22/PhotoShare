@@ -1,0 +1,18 @@
+<!doctype html>
+<head> <link rel="stylesheet" type="text/css" href="style.css">
+<title>Search pictures based on user ID!</title>
+</head>
+<body>
+
+  <div>
+  <div id = "content">
+    <form method="post" action="{{ url_for('people') }}">
+      <label for="userid">Enter the user ID number:</label>
+      <input type="userid" name="userid" />
+      <input type="submit" />
+      <p>Click <a href='/profile'>here</a> to go back.</p>
+    </form>
+  </div>
+
+
+</body>

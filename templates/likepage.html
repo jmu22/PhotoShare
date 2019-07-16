@@ -1,0 +1,21 @@
+<!doctype html>
+<head> <link rel="stylesheet" type="text/css" href="style.css">
+<title>Like a picture </title>
+</head>
+<body>
+
+
+  <div>
+  <div id = "content">
+    <form method="post" action="{{ url_for('likepc') }}">
+      <label for="picid">Enter the picture id number (reference in all photos):</label>
+      <input type="picid" name="picid" />
+      <label for="ownid">Enter your id:</label>
+      <input type="ownid" name="ownid" />
+      <input type="submit" />
+      <p>Click <a href='/profile'>here</a> to go back.</p>
+    </form>
+  </div>
+
+
+</body>

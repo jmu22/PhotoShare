@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<head> <link rel="stylesheet" type="text/css" href="style.css"> </head>
+{% if list %}
+<h2>Here's your Friend List </h2>
+
+    {% for x in list %}
+
+        <li>{{x[0]}} , {{x[1]}}, {{ x[2] }}</li>
+    {% endfor %}
+    </ul>
+{% endif %}

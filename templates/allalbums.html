@@ -1,0 +1,26 @@
+
+<!doctype html>
+<head> <link rel="stylesheet" type="text/css" href="style.css"> </head>
+{% if albums %}
+<h2>Here are your albums:</h2>
+    <ul style="list-style-type:none">
+    {% for album in albums %}
+
+        <li>{{album[0]}}</li>
+    {% endfor %}
+    </ul>
+{% endif %}
+
+
+</div>
+<div id="content">
+    <form method="post" action="{{ url_for('lookalbums') }}">
+        <label for="alname">Look through album:</label>
+        <input type="alname" name="alname" />
+        <input type="submit" />
+  </div>
+<p><a href = '/delalbum'>Delete Album</a></p>
+<ul>
+  <li><a href='/addtoalbum'>Add photo to album</a></li>
+  <li>Click <a href='/profile'>here</a> to go back to your profile.</li>
+ </ul>

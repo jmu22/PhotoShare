@@ -1,0 +1,21 @@
+<!doctype html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+<title>Create a new album!</title>
+</head>
+<body>
+
+
+  <div>
+  <div id = "content">
+    <form method="post" action="{{ url_for('newalbum') }}">
+      <label for="albname">Enter the album name:</label>
+      <input type="albname" name="albname" />
+      <input type="submit" />
+      <p>Click <a href='/profile'>here</a> to go back.</p>
+    </form>
+  </div>
+
+
+</body>

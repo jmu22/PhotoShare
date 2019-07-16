@@ -1,0 +1,18 @@
+<!doctype html>
+<h2>Photos in {{ album }}:</h2>
+
+{% if allpics %}
+<h2> TEST </h2>
+  <ul>
+  {% for pic in allpics %}
+
+      <li>{{pic[2]}}<br>
+      <img src='data:image/png;base64, {{pic[0]}}'/></li>
+  {% endfor %}
+  </ul>
+{% endif %}
+<p><a href ='/addtoalbum'>Add another photo to this album</a></p>
+<p><a href ='deletefromalbum'>Delete a photo from an album</a></p>
+<p> Go to <a href='/profile'>profile?</a></p>
+<p><a href='/'>Home</a></p>
+

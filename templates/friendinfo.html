@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<head> <link rel="stylesheet" type="text/css" href="style.css"></head>
+{% if matches %}
+<h2>Here's your match </h2>
+
+    {% for x in matches %}
+
+        <li>{{x[0]}} , {{x[1]}} , {{x[2]}} , {{x[3]}} , {{x[4]}} , {{x[5]}}</li>
+    {% endfor %}
+    </ul>
+{% endif %}
